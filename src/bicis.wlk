@@ -7,7 +7,7 @@ class Bicis {
 	method tieneLuz(){}
 	method marca(){}
 	
-	method cantidadAccesorios{
+	method cantidadAccesorios(){
 		return accesorios.size()
 	}
 }
