@@ -23,5 +23,7 @@ class Bicis {
 	method tieneLuz(){
 		return accesorios.size()>0
 	}
-	method cantidadAccesoriosLivianos(){}
+	method cantidadAccesoriosLivianos(){
+		return accesorios.filter({acc=>acc.peso()>1}).size()
+	}
 }

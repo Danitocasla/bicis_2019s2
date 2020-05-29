@@ -1,0 +1,5 @@
+
+test "test de Ejemplo de Bici" {
+	const bici1 = new Bicis()
+	assert.that(true)
+}
