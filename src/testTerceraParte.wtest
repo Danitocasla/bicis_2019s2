@@ -1,0 +1,43 @@
+import bicis.*
+import accesorios.*
+import depositos.*
+import marcas.*
+
+test "testX" {
+	const bici1 = new Bicis()
+	bici1.rodado(28)
+	bici1.largo(175)
+	bici1.marca(olmo)
+	const farolito1 = new Farolito()
+	bici1.agregarAccesorio(farolito1)
+		
+	const bici2 = new Bicis()
+	bici2.rodado(26)
+	bici2.largo(110)
+	bici2.marca(legnano)
+	const farol = new Farolito()
+	const canasto = new Canasto()
+	canasto.volumen(8)
+	const morral = new Morral()
+	morral.largo(21)
+	morral.ojoDeGato(true)
+	bici2.agregarAccesorio(farol)
+	bici2.agregarAccesorio(canasto)
+	bici2.agregarAccesorio(morral)
+	const bici3 = new Bicis()
+	bici3.rodado(20)
+	bici3.largo(90)
+	bici3.marca(legnano)
+	const morral1 = new Morral()
+	morral1.largo(6)
+	morral1.ojoDeGato(false)
+	bici3.agregarAccesorio(morral1)
+	
+	const depo = new Deposito()
+	depo.agregarBici(bici1)
+	depo.agregarBici(bici2)
+	depo.agregarBici(bici3)
+	
+	assert.equals()
+
+}

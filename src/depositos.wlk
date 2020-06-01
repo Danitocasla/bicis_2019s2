@@ -17,4 +17,17 @@ class Deposito {
 	method hayBiciSuperCarga(carga){
 		return bicicletas.any({bici=>bici.carga()>carga})
 	}
+	method marcaBiciMasRapida(){
+		return bicicletas.max({bici=>bici.velocidadCrucero()}).marca()
+	}
+	method cargaTotalLargas(){
+		return bicicletas.filter({
+			bici=>bici.largo()>170
+		}).sum({bici=>bici.carga()})
+	}
+	method cantidadBiciSinAcc(){
+		return bicicletas.filter({
+			bici=>bici.accesorios().size()==0
+		}).size()
+	}
 }
