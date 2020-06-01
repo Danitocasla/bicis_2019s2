@@ -28,16 +28,15 @@ test "testX" {
 	bici3.rodado(20)
 	bici3.largo(90)
 	bici3.marca(legnano)
-	const morral1 = new Morral()
-	morral1.largo(6)
-	morral1.ojoDeGato(false)
-	bici3.agregarAccesorio(morral1)
+	
 	
 	const depo = new Deposito()
 	depo.agregarBici(bici1)
 	depo.agregarBici(bici2)
 	depo.agregarBici(bici3)
 	
-	assert.equals()
+	assert.equals(olmo, depo.marcaBiciMasRapida())
+	assert.equals(0, depo.cargaTotalLargas())
+	assert.equals(1, depo.cantidadBiciSinAcc())
 
 }
