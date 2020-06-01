@@ -1,5 +1,58 @@
+import bicis.*
+import accesorios.*
+import marcas.*
 
-test "test de Ejemplo de Bici" {
+test "test de Ejemplo de Bici1" {
 	const bici1 = new Bicis()
-	assert.that(true)
+	bici1.rodado(28)
+	bici1.largo(150)
+	bici1.marca(olmo)
+	const farolito1 = new Farolito()
+	bici1.agregarAccesorio(farolito1)
+	
+	assert.equals(85, bici1.altura())
+	assert.equals(34, bici1.velocidadCrucero())
+	assert.equals(0,bici1.carga())
+	assert.equals(14.5, bici1.peso())
+	assert.that(bici1.tieneLuz())
+	assert.equals(1, bici1.cantidadAccesoriosLivianos())
+}
+test "test de ejemplo de Bici2"{
+	const bici2 = new Bicis()
+	bici2.rodado(26)
+	bici2.largo(110)
+	bici2.marca(legnano)
+	const farol = new Farolito()
+	const canasto = new Canasto()
+	canasto.volumen(8)
+	const morral = new Morral()
+	morral.largo(21)
+	morral.ojoDeGato(true)
+	bici2.agregarAccesorio(farol)
+	bici2.agregarAccesorio(canasto)
+	bici2.agregarAccesorio(morral)
+	
+	assert.equals(80, bici2.altura())
+	assert.equals(28, bici2.velocidadCrucero())
+	assert.equals(15.5, bici2.peso())
+	assert.equals(23, bici2.carga())
+	assert.that(bici2.tieneLuz())
+	assert.equals(2, bici2.cantidadAccesoriosLivianos())
+}
+test "test de Ejemplo Bici3"{
+	const bici3 = new Bicis()
+	bici3.rodado(20)
+	bici3.largo(90)
+	bici3.marca(legnano)
+	const morral1 = new Morral()
+	morral1.largo(6)
+	morral1.ojoDeGato(false)
+	bici3.agregarAccesorio(morral1)
+	
+	assert.equals(65, bici3.altura())
+	assert.equals(22, bici3.velocidadCrucero())
+	assert.equals(2, bici3.carga())
+	assert.equals(11.2, bici3.peso())
+	assert.notThat(bici3.tieneLuz())
+	assert.equals(0, bici3.cantidadAccesoriosLivianos())
 }

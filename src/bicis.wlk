@@ -17,13 +17,16 @@ class Bicis {
 		}
 		else{return rodado + 2}
 	}
+	method peso(){
+		return ((rodado/2)+ accesorios.sum({acc=>acc.peso()})) 
+	}
 	method carga(){
-		return accesorios.sum({acc=>acc.peso()})
+		return accesorios.sum({acc=>acc.carga()})
 	}
 	method tieneLuz(){
-		return accesorios.size()>0
+		return accesorios.filter({acc=>acc.esLuminoso()}).size()>0
 	}
 	method cantidadAccesoriosLivianos(){
-		return accesorios.filter({acc=>acc.peso()>1}).size()
+		return accesorios.filter({acc=>acc.peso()<1}).size()
 	}
 }
