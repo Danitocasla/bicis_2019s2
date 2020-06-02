@@ -30,4 +30,10 @@ class Deposito {
 			bici=>bici.accesorios().size()==0
 		}).size()
 	}
+	method bicisCompanieras(unaBici){
+		return bicicletas.filter({
+			bici=>(bici.largo() - unaBici.largo()).between(-10,10) and 
+			bici.marca()==unaBici.marca()
+		})
+	}
 }
