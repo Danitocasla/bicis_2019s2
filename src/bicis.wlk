@@ -6,6 +6,15 @@ class Bicis {
 	var property largo
 	var property marca
 	
+	method esCompaniera(unaBici){ //correccion
+		return self.sonLargosParecidosCon(unaBici) and 
+			bici.marca()==unaBici.marca()
+			and self != unaBici
+	}
+	method sonLargosParecidosCon(unaBici){ //correccion
+		return (bici.largo() - unaBici.largo()).between(-10,10)
+	}
+	
 	method agregarAccesorio(unAccesorio){
 		accesorios.add(unAccesorio)
 	}

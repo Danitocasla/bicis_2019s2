@@ -32,8 +32,9 @@ class Deposito {
 	}
 	method bicisCompanieras(unaBici){
 		return bicicletas.filter({
-			bici=>(bici.largo() - unaBici.largo()).between(-10,10) and 
-			bici.marca()==unaBici.marca()
+			bici=> bici.esCompaniera(unaBici)//corregido
+			/*(bici.largo() - unaBici.largo()).between(-10,10) and 
+			bici.marca()==unaBici.marca()*/
 		})
 	}
 }
