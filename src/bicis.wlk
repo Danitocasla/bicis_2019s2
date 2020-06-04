@@ -8,11 +8,11 @@ class Bicis {
 	
 	method esCompaniera(unaBici){ //correccion
 		return self.sonLargosParecidosCon(unaBici) and 
-			bici.marca()==unaBici.marca()
+			self.marca()==unaBici.marca()
 			and self != unaBici
 	}
 	method sonLargosParecidosCon(unaBici){ //correccion
-		return (bici.largo() - unaBici.largo()).between(-10,10)
+		return (self.largo() - unaBici.largo()).between(-10,10)
 	}
 	
 	method agregarAccesorio(unAccesorio){
