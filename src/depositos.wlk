@@ -37,4 +37,16 @@ class Deposito {
 			bici.marca()==unaBici.marca()*/
 		})
 	}
+	//desafio
+	method hayCompanieras(){
+		return bicicletas.any({ bici =>
+			not self.bicisCompanieras(bici).isEmpty()
+		})
+	}
+	
+	
+	method seHizoLaLuz(){
+		const cantidadSinLuz = bicicletas.count({bici => not bici.tieneLuz()})
+		return 	bicicletas.drop(cantidadSinLuz).all({bici=>bici.tieneLuz()})
+		}
 }

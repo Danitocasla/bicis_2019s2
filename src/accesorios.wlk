@@ -16,3 +16,8 @@ class Morral{
 	method carga(){return largo / 3}
 	method esLuminoso(){return ojoDeGato}
 }
+
+/*
+ * Se puede agregar un objeto o clase respetando el contrato de peso,
+ * carga y esLuminoso para ser polimorfico con los demas objetos 
+ */
